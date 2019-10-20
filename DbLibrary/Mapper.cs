@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using ClassLibrary1;
+using DbLibrary;
 using DbLibrary.Entities;
-using Project1_Mark.Models;
+//using Project1_Mark.Models;
 
 namespace DBLibrary
 {
     public class Mapper
     {
         //ENTITY TO CLASS
-        public CustomerViewModel MapCustomer(Customers customer)
+        public static CustomerViewModel MapCustomer(Customers customer)
         {
             return new CustomerViewModel(customer.CustomerId, customer.CustomerFirstName, customer.CustomerLastName);
         }

@@ -11,6 +11,7 @@
           "ClassLibrary1": "1.0.0",
           "DbLibrary": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
+          "NLog": "4.6.7",
           "coverlet.collector": "1.0.1",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
@@ -605,6 +606,14 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.1.19813"
+          }
+        }
+      },
+      "NLog/4.6.7": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.7.10445"
           }
         }
       },
@@ -1667,6 +1676,9 @@
         }
       },
       "ClassLibrary1/1.0.0": {
+        "dependencies": {
+          "NLog": "4.6.7"
+        },
         "runtime": {
           "ClassLibrary1.dll": {}
         }
@@ -1674,7 +1686,9 @@
       "DbLibrary/1.0.0": {
         "dependencies": {
           "ClassLibrary1": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
+          "NLog": "4.6.7",
+          "Project1_Mark.Models": "1.0.0"
         },
         "runtime": {
           "DbLibrary.dll": {}
@@ -1897,6 +1911,13 @@
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "NLog/4.6.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xSIzXrIF89Ww6yoJPvyBcu4JLgNiDiEaTT4GyVltZEeVIvkgSm9J/srUy1Yz0EXwbTv502l8knoCFrgNc/MUMA==",
+      "path": "nlog/4.6.7",
+      "hashPath": "nlog.4.6.7.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

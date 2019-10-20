@@ -2411,7 +2411,7 @@
       },
       "ClassLibrary1/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETCoreApp,Version=v3.0",
         "dependencies": {
           "NLog": "4.6.7"
         },
@@ -2424,7 +2424,7 @@
       },
       "DbLibrary/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v3.0",
         "dependencies": {
           "ClassLibrary1": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",

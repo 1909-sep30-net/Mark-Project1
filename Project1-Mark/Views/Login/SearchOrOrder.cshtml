@@ -1,4 +1,4 @@
-﻿@model Project1_Mark.Models.CustomerViewModel
+﻿@model DbLibrary.CustomerViewModel
 @{
     ViewData["Title"] = "SearchOrOrder";
 }
@@ -10,6 +10,19 @@
 <h5>Welcome back, @Model.CustomerFirstName @Model.CustomerLastName!</h5>
 <br>
 Are you ready to shop?
+<form method="GET" asp-action="Order" asp-controller="Order" class="nav-link text-dark">
+    <input type="hidden" id="CustId" name="CustomerId" value=@Model.CustID>
+    <input type="hidden" id="CustomerFirstName" name="CustomerFirstName" value=@Model.CustomerFirstName>
+    <input type="hidden" id="CustomerLastName" name="CustomerLastName" value=@Model.CustomerLastName>
+    <input type="submit" value="Proceed to Order Page">
+</form>
 
-<br>
-Or would you rather do some searches?
+<br><br>
+
+Or would you rather do some searches
+    <form method="GET" asp-action="Search" asp-controller="Search" class="nav-link text-dark">
+        <input type="hidden" id="custId" name="CustomerId" value=@Model.CustID>
+        <input type="hidden" id="CustomerFirstName" name="CustomerFirstName" value=@Model.CustomerFirstName>
+        <input type="hidden" id="CustomerLastName" name="CustomerLastName" value=@Model.CustomerLastName>
+        <input type="submit" value="Search Stuff">
+    </form>

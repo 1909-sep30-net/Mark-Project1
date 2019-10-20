@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ClassLibrary1;
+using DbLibrary;
 using DBLibrary;
+//using DBLibrary.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project1_Mark.Models;
+//using Project1_Mark.Models;
 
 namespace Project1_Mark.Controllers
 {
@@ -32,19 +35,13 @@ namespace Project1_Mark.Controllers
         public ActionResult Login([FromQuery] string CustomerFirstName, string CustomerLastName)
         {
             //get the info sent from the form
-            var customer = new Customer( CustomerFirstName, CustomerLastName );
-            CustomerViewModel cust1;
-            cust1 = repo.ReadCustomer(customer);
+            Customer customer = new Customer( CustomerFirstName, CustomerLastName );
+            CustomerViewModel cust1 = repo.ReadCustomer(customer);
             
-
             if(cust1 == null)
             {//this renders the index page again.
                 return View("error", new ErrorViewModel {errorMsg = $"{CustomerFirstName} {CustomerLastName} was not found. Please try again." });
             }
-
-
-            //search DB using the DBRepository
-
 
             //if successful, render page to choose to order or search stuff.
             return View("SearchOrOrder", cust1);
@@ -52,9 +49,16 @@ namespace Project1_Mark.Controllers
 
 
         // GET: Login/Create
-        public ActionResult Create()
+        public ActionResult Register([FromQuery] string CustomerFirstName, string CustomerLastName)
         {
-            return View();
+            Customer customer = new Customer(CustomerFirstName, CustomerLastName);
+
+            CustomerViewModel cust1 = repo.AddCustomer(customer);
+            if (cust1 == null)
+            {//this renders the index page again.
+                return View("error", new ErrorViewModel { errorMsg = $"{CustomerFirstName} {CustomerLastName} was not found. Please try again." });
+            }
+            return View("SearchOrOrder", cust1);
         }
 
         // POST: Login/Create

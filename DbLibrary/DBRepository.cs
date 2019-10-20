@@ -24,7 +24,8 @@ using ClassLibrary1;
 using DbLibrary.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Project1_Mark.Models;
+using DbLibrary;
+//using Project1_Mark.Models;
 
 namespace DBLibrary
 {
@@ -243,28 +244,35 @@ namespace DBLibrary
         ///<summary>
         ///takes a context and Customer. Returns a true bool to indicate insertion was successfull
         /// </summary>
-        public bool AddCustomer(Customer customer)
+        public CustomerViewModel AddCustomer(Customer customer)
         {
+            //check of the context has the customer by name
             if (!(_dbContext.Customers.Any(c => c.CustomerFirstName == customer.CustomerFirstName && c.CustomerLastName == customer.CustomerLastName)))
             { 
+                //if customer is NOT found,,, add the customer
                 Customers entity = Mapper.MapCustomer(customer);
                 _dbContext.Customers.Add(entity);//maybe the context still has the first wrong Customer?
             }
             else
             {
                 Console.WriteLine("\tThere is already an account with that name.\n\tPlease try again with a different name.");
-                return false;
+                return null;
             }
 
-            try{ _dbContext.SaveChanges(); }
+            try
+            { //save changes
+                _dbContext.SaveChanges(); 
+            }
             catch (DbUpdateException ex)
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("There was an error Adding your account. Please try again with a different name.");
                 s_logger.Info(ex);
-                return false;
+                return null;
             }
-            return true;
+
+            //no errors till now so send the same name into Read Customer to get the new customer from the DB
+            return ReadCustomer(customer); 
         }
 
         ///<summary>
@@ -301,11 +309,11 @@ namespace DBLibrary
             return result1;
         }
 
-        public List<Customer> ReadAllCustomers()
+        public List<CustomerViewModel> ReadAllCustomers()
         {
-            var result = _dbContext.Customers;
-            List<Customer> custs = new List<Customer>();
-            foreach (var item in result)
+            var result = _dbContext.Customers;              //get all the Customers
+            List<CustomerViewModel> custs = new List<CustomerViewModel>();    //create a list of Customer objects
+            foreach (var item in result)                    //map each Customers to a Customer
             {
                 custs.Add(Mapper.MapCustomer(item));
             }
