@@ -1,0 +1,11 @@
+C:\revature\mark-project0\DbLibrary\bin\Debug\netstandard2.0\DbLibrary.deps.json
+C:\revature\mark-project0\DbLibrary\bin\Debug\netstandard2.0\DbLibrary.dll
+C:\revature\mark-project0\DbLibrary\bin\Debug\netstandard2.0\DbLibrary.pdb
+C:\revature\mark-project0\DbLibrary\obj\Debug\netstandard2.0\DbLibrary.csprojAssemblyReference.cache
+C:\revature\mark-project0\DbLibrary\obj\Debug\netstandard2.0\DbLibrary.AssemblyInfoInputs.cache
+C:\revature\mark-project0\DbLibrary\obj\Debug\netstandard2.0\DbLibrary.AssemblyInfo.cs
+C:\revature\mark-project0\DbLibrary\obj\Debug\netstandard2.0\DbLibrary.dll
+C:\revature\mark-project0\DbLibrary\obj\Debug\netstandard2.0\DbLibrary.pdb
+C:\revature\mark-project0\DbLibrary\bin\Debug\netstandard2.0\ClassLibrary1.dll
+C:\revature\mark-project0\DbLibrary\bin\Debug\netstandard2.0\ClassLibrary1.pdb
+C:\revature\mark-project0\DbLibrary\obj\Debug\netstandard2.0\DbLibrary.csproj.CopyComplete

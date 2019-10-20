@@ -1,0 +1,2 @@
+C:\revature\mark-project0\DbLibrary\obj\Release\netstandard2.0\DbLibrary.AssemblyInfoInputs.cache
+C:\revature\mark-project0\DbLibrary\obj\Release\netstandard2.0\DbLibrary.AssemblyInfo.cs
