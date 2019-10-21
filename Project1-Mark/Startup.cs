@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using DbLibrary.Entities;
 using Microsoft.EntityFrameworkCore;
 using DBLibrary;
+using ClassLibrary1;
 
 namespace Project1_Mark
 {
@@ -37,6 +38,7 @@ namespace Project1_Mark
             });
 
             services.AddScoped<DBRepository>();//this contructs the object also.
+            //services.AddScoped<Customer>();
 
             services.AddControllersWithViews();
         }

@@ -48,22 +48,37 @@ namespace DBLibrary
 
         //don't know if this is necessary....
         private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
+
+
+        /*************************************************************************/
+
         /**************************************
         * INVENTORY FUNCTIONS BELOW
         * ************************************/
         /// <summary>
-        /// this method takes the context and location name and returns a List of Inventory objects in 
-        /// that locations inventory.
+        /// this method takes a location name and returns a List of InventoryViewModel objects
         /// </summary>
         /// <param name="context"></param>
         /// <param name="locationName"></param>
         /// <returns>List<Products> </returns>
-        public List<Inventory> ReadLocationInventory(string locationName)
+        public List<InventoryViewModel> ReadLocationInventory(string locationName)
         {
             //find all the products for that location
-            var result = _dbContext.Inventory
+            var inventory = _dbContext.Inventory
                 .Where(i => i.LocationName == locationName).ToList();
-            return result;
+
+            //Make a list to hold mapped InventoryViewModels
+            List<InventoryViewModel> invList = new List<InventoryViewModel>();
+
+            //In LOOP, send to Mapper to change the Inventory list to a InventoryViewModel List.
+            foreach (Inventory item in inventory)
+            {
+                InventoryViewModel inv = Mapper.MapInventory(item); //convert to InventoryViewModel
+                inv.ProductName = GetProdNameById(item.ProductId);  //Add product name
+                invList.Add(inv);                                   //append to List to return to OrderController
+            }
+
+            return invList;
         }
 
         /**************************************
@@ -207,11 +222,15 @@ namespace DBLibrary
         ///<summary>
         ///This option not required at this time
         ///</summary>
-        //public static bool ReadOneLocation(Project0Context context, int location)//this might be accomplished with SearchLocations() below
-        //{
-        //    if()
-        //    return true;
-        //}
+        public Location ReadOneLocation(string location)
+        {
+            //find the location information
+            var loc = _dbContext.Locations
+                .Where(x => x.LocationName == location).FirstOrDefault();
+
+            //Map and return
+            return Mapper.MapLocation(loc);
+        }
 
         ///<summary>
         ///This option not required at this time
@@ -240,7 +259,7 @@ namespace DBLibrary
         /**************************************
          * CUSTOMER FUNCTIONS BELOW
          * *************************************/
-         
+
         ///<summary>
         ///takes a context and Customer. Returns a true bool to indicate insertion was successfull
         /// </summary>

@@ -1,0 +1,87 @@
+﻿@model List<DbLibrary.InventoryViewModel>
+
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<h1>Inventory</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Product ID
+            </th>
+            <th>
+                Location Name
+            </th>
+            <th>
+                Product Price
+            </th>
+            <th>
+                Quantity Desired.
+            </th>
+        </tr>
+    </thead>
+    @*<tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                    @for (int i = 1; i <= item.ProductQuantity; i++)
+                    {
+                        <option value="i" name ="@item.ProductName ">i</option>
+                    }
+                </td
+            </tr>
+        }
+    </tbody>*@
+</table>
+
+<form method="POST" asp-action="AddProducts" asp-controller="Order" class="nav-link text-dark">
+    @foreach (var item in Model)
+    {
+        <div>
+            <span>@item.ProductName</span>
+            <div>
+                <select name=@item.ProductName>
+                    @for (int i = 0; i <= item.ProductQuantity; i++)
+                    {
+                        <option value=@i>@i</option>
+                    }
+                </select>
+            </div>
+        </div>
+    }
+    <input type="submit" value="Submit">
+</form>
+
+
+    @*<input type="text" list="products" name="products">
+    <select id="ProductName">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <option value=@Model[i].LocationName>@Model[i].LocationName</option>
+        }
+    </select>
+    <input type="submit" value="confirm">*@
+
+
+        @*public int InventoryId { get; set; }
+        public int ProductId { get; set; }
+        public string LocationName { get; set; }
+        public decimal? ProductPrice { get; set; }
+        public int ProductQuantity { get; set; }
+        public DateTime DateModified { get; set; }*@

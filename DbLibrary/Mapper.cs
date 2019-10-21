@@ -94,11 +94,15 @@ namespace DBLibrary
         //ENTITY TO CLASS
         public static Location MapLocation(Locations locations)
         {
-            return new Location(locations.LocationId, locations.LocationName);
+            Location loc = new Location();
+            loc.locID = locations.LocationId;
+            loc.LocationName = locations.LocationName;
+
+            return loc;
         }
 
         //CLASS TO ENTITY
-        public static Locations MapLocation(Location location)
+        public Locations MapLocation(Location location)
         {
             return new Locations
             {
@@ -106,7 +110,18 @@ namespace DBLibrary
             };
         }
 
-        //this method will transfer the orders to a list.
+        //Map Inventory to InventoryViewModel
+        public static InventoryViewModel MapInventory(Inventory i)
+        {
+            InventoryViewModel inv = new InventoryViewModel();
+
+            inv.ProductId = i.ProductId;
+            inv.ProductPrice = i.ProductPrice;
+            inv.ProductQuantity = i.ProductQuantity;
+            inv.LocationName = i.LocationName;
+
+            return inv;
+        }
 
     }
 }

@@ -1,13 +1,12 @@
 ﻿@model DbLibrary.CustomerViewModel
+@*@model DbLibrary.LocationsViewModel*@
 @{
     ViewData["Title"] = "SearchOrOrder";
 }
 
 <h1>SearchOrOrder</h1>
-
-@Model.CustID
-
-<h5>Welcome back, @Model.CustomerFirstName @Model.CustomerLastName!</h5>
+<br>
+<h5>Welcome, @Model.CustomerFirstName @Model.CustomerLastName!</h5>
 <br>
 Are you ready to shop?
 <form method="GET" asp-action="Order" asp-controller="Order" class="nav-link text-dark">

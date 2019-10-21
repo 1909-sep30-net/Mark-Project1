@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 using ClassLibrary1;
 using DbLibrary;
 using DBLibrary;
-//using DBLibrary.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project1_Mark.Models;
-//using Project1_Mark.Models;
 
 namespace Project1_Mark.Controllers
 {
@@ -22,8 +20,6 @@ namespace Project1_Mark.Controllers
         {
             this.repo = toContext; 
         }
-
-
 
         // GET: Login
         public ActionResult Index()

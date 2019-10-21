@@ -29,13 +29,13 @@ namespace Project1_Mark.Controllers
             switch (userType)
             {
                 case "A":
-                    OrderDetails(context);
+                    //OrderDetails(context);
                     break;
                 case "B":
-                    LocationHistory(context);
+                    //LocationHistory(context);
                     break;
                 case "C":
-                    CustomerHistory(context);
+                    //CustomerHistory(context);
                     break;
             }
 
