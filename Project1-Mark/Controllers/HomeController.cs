@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using ClassLibrary1;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Project1_Mark.Models;
@@ -37,6 +38,13 @@ namespace Project1_Mark.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public ActionResult Logout([FromQuery] int CustomerId, string CustomerFirstName, string CustomerLastName)
+        {
+            Customer customer = new Customer(CustomerId, CustomerFirstName, CustomerLastName);
+
+            return View("Index");
         }
     }
 }

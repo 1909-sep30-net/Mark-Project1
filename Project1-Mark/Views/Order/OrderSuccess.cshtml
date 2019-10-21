@@ -1,0 +1,37 @@
+﻿@model DbLibrary.CustomerViewModel
+@{
+    ViewData["Title"] = "OrderSuccess";
+}
+
+<h1>Congratulations on your order, @Model.CustomerFirstName!</h1>
+<br>
+<br>
+<br>
+<h4>Now. Would you like to exit or start over?</h4>
+
+<form method="GET" asp-action="Order" asp-controller="Order" class="nav-link text-dark">
+    <input type="hidden" id="CustId" name="CustomerId" value=@Model.CustID>
+    <input type="hidden" id="CustomerFirstName" name="CustomerFirstName" value=@Model.CustomerFirstName>
+    <input type="hidden" id="CustomerLastName" name="CustomerLastName" value=@Model.CustomerLastName>
+    <input type="submit" value="Proceed to Order Page">
+</form>
+
+<br>
+<br>
+
+<form method="GET" asp-action="Search" asp-controller="Search" class="nav-link text-dark">
+    <input type="hidden" id="custId" name="CustomerId" value=@Model.CustID>
+    <input type="hidden" id="CustomerFirstName" name="CustomerFirstName" value=@Model.CustomerFirstName>
+    <input type="hidden" id="CustomerLastName" name="CustomerLastName" value=@Model.CustomerLastName>
+    <input type="submit" value="Search Stuff">
+</form>
+
+<br>
+<br>
+
+<form method="GET" asp-action="Logout" asp-controller="Home" class="nav-link text-dark">
+    <input type="hidden" id="custId" name="CustomerId" value=@Model.CustID>
+    <input type="hidden" id="CustomerFirstName" name="CustomerFirstName" value=@Model.CustomerFirstName>
+    <input type="hidden" id="CustomerLastName" name="CustomerLastName" value=@Model.CustomerLastName>
+    <input type="submit" value="Exit">
+</form>

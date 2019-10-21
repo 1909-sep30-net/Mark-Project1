@@ -12,11 +12,8 @@ namespace DbLibrary
         public string LocationName { get; set; }
         public decimal? ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
-        //public DateTime DateModified { get; set; }
-
-        //public virtual Products Product { get; set; }
-
-
+        //public List<int> QuantItems { get; set; }
+        
         //constructor
         public InventoryViewModel()
         {

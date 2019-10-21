@@ -133,3 +133,4 @@ C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Project1_Mark.Vi
 C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Project1_Mark.csproj.CopyComplete
 C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Order\ViewLocations.cshtml.g.cs
 C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Order\Inventory.cshtml.g.cs
+C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Order\OrderSuccess.cshtml.g.cs

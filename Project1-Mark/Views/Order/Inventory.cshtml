@@ -1,15 +1,12 @@
-﻿@model List<DbLibrary.InventoryViewModel>
+﻿@model DbLibrary.ViewInventoryViewModels
 
 @{
     ViewData["Title"] = "Inventory";
 }
 
-<h1>Inventory</h1>
+<h2>Please choose your desired quantity from the available products below.</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+@*<table class="table">
     <thead>
         <tr>
             <th>
@@ -26,40 +23,21 @@
             </th>
         </tr>
     </thead>
-    @*<tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProductPrice)
-                </td>
-                <td>
-                    @for (int i = 1; i <= item.ProductQuantity; i++)
-                    {
-                        <option value="i" name ="@item.ProductName ">i</option>
-                    }
-                </td
-            </tr>
-        }
-    </tbody>*@
-</table>
+
+</table>*@
 
 <form method="POST" asp-action="AddProducts" asp-controller="Order" class="nav-link text-dark">
-    @foreach (var item in Model)
+    @foreach (var item in Model.InventoriesAll)
     {
+        <br><br>
         <div>
             <span>@item.ProductName</span>
             <div>
-                <select name=@item.ProductName>
+                <select name="@item.ProductName">
                     @for (int i = 0; i <= item.ProductQuantity; i++)
                     {
                         <option value=@i>@i</option>
+                        <br>
                     }
                 </select>
             </div>

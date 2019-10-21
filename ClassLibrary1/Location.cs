@@ -6,14 +6,11 @@ namespace ClassLibrary1
 {
     public class Location
     {
-
-
         public int      locID           { get; set; }
         public string   LocationName    { get; set; }
         public string   LocationStreet  { get; set; }
         public string   LocationCity    { get; set; }
         public int      LocationZip     { get; set; }
-
 
         public Location()  { }
 

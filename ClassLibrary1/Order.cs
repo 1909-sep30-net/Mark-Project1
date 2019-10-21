@@ -9,7 +9,7 @@ namespace ClassLibrary1
         public int      OrderID     { get; set; }
         public int      CustomerID  { get; set; }
         public int      LocationID  { get; set; }
-        public IDictionary<string, int> itemsOrdered = new Dictionary<string, int>();//to hold the product and quantity
+        public IDictionary<string, int> itemsOrdered = new Dictionary<string, int>();//to hold the product name and quantity ordered
 
         public Order() { }
         public Order(int locationId, int customerId)

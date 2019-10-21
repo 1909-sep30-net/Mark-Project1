@@ -328,6 +328,21 @@ namespace DBLibrary
             return result1;
         }
 
+        public CustomerViewModel ReadCustomerById(int custId)
+        {
+            var result = _dbContext.Customers
+                .Where(c => c.CustomerId == custId)
+                .FirstOrDefault();
+
+            if (result == null)
+            {
+                Console.WriteLine("Sorry, That customer was not found.");
+                return null;
+            }
+            var result1 = Mapper.MapCustomer(result);
+            return result1;
+        }
+
         public List<CustomerViewModel> ReadAllCustomers()
         {
             var result = _dbContext.Customers;              //get all the Customers
@@ -374,6 +389,7 @@ namespace DBLibrary
         ///</summary>
         public void AddOrder(Order order)
         {
+            //make an EF-Friendly Orders object
             Orders orders = new Orders();
             orders.CustomerId = order.CustomerID;
             orders.LocationId = order.LocationID;
@@ -394,6 +410,48 @@ namespace DBLibrary
             }
             _dbContext.Add(orders);
             _dbContext.SaveChanges();
+
+            var success = DecreaseInventory(order);
+
+            if(success == false)
+            {
+                throw new Exception("There was an error updating the DB. Don't worry. Your order was placed successfully.");
+            }
+        }
+
+        private bool DecreaseInventory(Order order)
+        {
+            //get the location name based on the locId 
+            var loc = _dbContext.Locations
+                .Where(x => x.LocationId == order.LocationID).FirstOrDefault();
+
+            foreach (var item in order.itemsOrdered)
+            {
+                //get the product ID based on the product name.
+                var prodId = _dbContext.Products
+                    .Where(x => x.ProductName == item.Key).FirstOrDefault();
+
+                //locate the product in inventory based on LocationName and ProductId
+                var ord = _dbContext.Inventory
+                    .Where(x => x.LocationName == loc.LocationName && x.ProductId == prodId.ProductId)
+                    .FirstOrDefault();
+
+                try
+                {
+                    //decrease the quantity of the product in inventory
+                    ord.ProductQuantity -= item.Value;
+                    _dbContext.SaveChanges();
+                }
+                catch (DbUpdateException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("There was an error Adding your order. Please try again.");
+                    s_logger.Info(ex);
+                }
+
+            }
+
+            return true;
         }
 
         ///<summary>

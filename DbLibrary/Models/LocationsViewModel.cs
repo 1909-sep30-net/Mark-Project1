@@ -12,9 +12,9 @@ namespace DbLibrary
         //    Orders = new HashSet<Orders>();
         //}
         //public int CustomerId { get; set; }
-        public int LocationId { get; set; }
+        public string LocationName { get; set; }
         //public string LocationName { get; set; }
-        public List<Locations> locationsAll { set; get; }
+        public IEnumerable<string> locationsAll { set; get; }
 
         public LocationsViewModel(){}
         

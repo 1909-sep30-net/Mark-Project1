@@ -11,8 +11,8 @@
 
 <form asp-controller="Order" asp-action="AddLocation">
 
-    <select asp-for="LocationId"
-            asp-items="@(new SelectList(Model.locationsAll,"LocationId", "LocationName"))">
+    <select asp-for="LocationName"
+            asp-items="@(new SelectList(Model.locationsAll,"LocationName"))">
         <option>Please select one</option>
     </select>
 
