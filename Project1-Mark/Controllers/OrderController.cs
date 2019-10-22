@@ -10,25 +10,27 @@ using DBLibrary;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project1_Mark.Models;
+using Microsoft.Extensions.Logging;
+using NLog;
 
 namespace Project1_Mark.Controllers
 {
     public class OrderController : Controller
     {
         DBRepository repo;
-        //Customer customer = new Customer();
-        //Location location = new Location();
-        //Order order = new Order();
-        //private readonly ILogger<Project0Context> _logger;
 
+        //create logging variables.
+        private readonly ILogger<OrderController> _logger;
+        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
 
         //put the services 
-        public OrderController(DBRepository toContext)//in startup the DBContext was created this will ......something
+        public OrderController(ILogger<OrderController> logger, DBRepository toContext)//in startup the DBContext was created this will ......something
         {
             this.repo = toContext;
-            //_logger = logger ?? throw new ArgumentNullException(nameof(logger));
-
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
+
+        /*************************************************************************/
 
         // GET: Order/Details/5
         public ActionResult Order([FromQuery] int CustomerId, string CustomerFirstName, string CustomerLastName)

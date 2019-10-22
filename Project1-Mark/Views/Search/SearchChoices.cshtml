@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "SearchChoices";
+}
+
+<h1>SearchChoices</h1>
+
+
+<h2>
+    Would you like to search for display details of an order,
+    display all order history of a store location,
+    or display all order history of a customer?
+</h2>
+
+
+<form method="GET" asp-action="GetOrderDetails" asp-controller="Search" class="nav-link text-dark">
+    <input type="submit" value="Get the Details of an Order.">
+</form>
+
+
+<form method="GET" asp-action="GetLocationHistory" asp-controller="Search" class="nav-link text-dark">
+    <input type="submit" value="Get the Order History of a Location">
+</form>
+
+<form method="GET" asp-action="GetCustomerHistory" asp-controller="Search" class="nav-link text-dark">
+    <input type="submit" value="Get the Order History of a Customer">
+</form>
+
+<br>
+<a asp-action="LogOut" asp-controller="Login">Log Out and Start Over?</a>

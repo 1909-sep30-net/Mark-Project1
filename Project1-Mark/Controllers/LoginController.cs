@@ -8,18 +8,32 @@ using DBLibrary;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project1_Mark.Models;
+using Microsoft.Extensions.Logging;
+using NLog;
 
 namespace Project1_Mark.Controllers
 {
     public class LoginController : Controller
     {
-
+        //create logging variables.
+        private readonly ILogger<LoginController> _logger;
+        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
         DBRepository repo;
-        //put the services 
-        public LoginController(DBRepository toContext)//in startup the DBContext was created this will 
+
+
+        /// <summary>
+        /// Initializes a new repository given a data source and instantiates logging
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="toContext"></param>
+        public LoginController(ILogger<LoginController> logger, DBRepository toContext)
         {
-            this.repo = toContext; 
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            this.repo = toContext;
         }
+
+
+        /*************************************************************************/
 
         // GET: Login
         public ActionResult Index()
@@ -55,6 +69,13 @@ namespace Project1_Mark.Controllers
                 return View("error", new ErrorViewModel { errorMsg = $"{CustomerFirstName} {CustomerLastName} was not found. Please try again." });
             }
             return View("SearchOrOrder", cust1);
+        }
+
+        public ActionResult LogOut()
+        {
+            SignOut();
+            //Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("index", "Home");
         }
     }
 }

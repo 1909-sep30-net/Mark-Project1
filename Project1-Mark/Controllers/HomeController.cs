@@ -7,17 +7,28 @@ using ClassLibrary1;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Project1_Mark.Models;
+using NLog;
 
 namespace Project1_Mark.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
+        //create logging variables.
+        private readonly ILogger<HomeController> _logger;
+        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
+
+        /// <summary>
+        /// Initializes a new repository given a data source and instantiates logging
+        /// </summary>
+        /// <param name="logger">The logger</param>
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
+
+        /*************************************************************************/
+
 
         public IActionResult Index()
         {

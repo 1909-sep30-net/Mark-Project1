@@ -5,19 +5,30 @@ using DbLibrary.Entities;
 using DBLibrary;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
+using Microsoft.Extensions.Logging;
+using NLog;
+using System.Diagnostics;
+//using Microsoft.AspNetCore.Mvc;
+
 
 namespace Project0_XUnitTest
 {
-
-
     public class UnitTest1
     {
+        //create logging variables.
+        private readonly ILogger<UnitTest1> _logger;
+        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
 
-/*        var optionsBuilder = new DbContextOptionsBuilder<Project0Context>();
-        optionsBuilder.UseSqlServer(config.connectionString);
-        var db = new Project0Context(optionsBuilder.Options);
-*/
+        /// <summary>
+        /// Initializes a new repository given a data source and instantiates logging
+        /// </summary>
+        /// <param name="logger">The logger</param>
+        public UnitTest1(ILogger<UnitTest1> logger)
+        {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
 
+        /*************************************************************************/
 
         [Fact]//make sure product constructor works.
         public void Test1()

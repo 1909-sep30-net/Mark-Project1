@@ -4,12 +4,30 @@ using System.Text;
 using ClassLibrary1;
 using DbLibrary;
 using DbLibrary.Entities;
-//using Project1_Mark.Models;
+using Microsoft.Extensions.Logging;
+using NLog;
 
 namespace DBLibrary
 {
     public class Mapper
     {
+        //create logging variables.
+        private readonly ILogger<Mapper> _logger;
+        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
+
+        /// <summary>
+        /// Initializes a new repository given a data source and instantiates logging
+        /// </summary>
+        /// <param name="logger">The logger</param>
+        public Mapper(ILogger<Mapper> logger)
+        {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
+
+        /*************************************************************************/
+
+
+
         //ENTITY TO CLASS
         public static CustomerViewModel MapCustomer(Customers customer)
         {

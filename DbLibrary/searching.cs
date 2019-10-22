@@ -4,12 +4,27 @@ using System.Linq;
 using ClassLibrary1;
 using DbLibrary.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using NLog;
 
 namespace DBLibrary
 {
     public class searching
     {
+        //create logging variables.
+        private readonly ILogger<searching> _logger;
+        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
 
+        /// <summary>
+        /// Initializes a new repository given a data source and instantiates logging
+        /// </summary>
+        /// <param name="logger">The logger</param>
+        public searching(ILogger<searching> logger)
+        {
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
+
+        /*************************************************************************/
 
 
 

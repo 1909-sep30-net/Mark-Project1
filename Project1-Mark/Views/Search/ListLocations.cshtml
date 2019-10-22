@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DbLibrary.Entities.Locations>
+
+@{
+    ViewData["Title"] = "ListLocations";
+}
+
+<h1>ListLocations</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateModified)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocationId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocationName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateModified)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "LocHistory", new { id = item.LocationId }) |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br>
+<a asp-action="LogOut" asp-controller="Login">Log Out and Start Over?</a>

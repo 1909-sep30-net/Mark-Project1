@@ -32,7 +32,7 @@ namespace DBLibrary
     public class DBRepository
     {
         private readonly Project0Context _dbContext;
-
+        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
         private readonly ILogger<Project0Context> _logger;
 
         /// <summary>
@@ -45,9 +45,6 @@ namespace DBLibrary
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
-
-        //don't know if this is necessary....
-        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
 
 
         /*************************************************************************/
@@ -497,6 +494,12 @@ namespace DBLibrary
         public List<Orders> ReadAllOrdersInTable()
         {
             return _dbContext.Orders.ToList();//NEED TO MAP!
+        }
+
+        public List<Orders> ReadAllOrdersByLocationId(int locId)
+        {
+            var orders = _dbContext.Orders.Where(x => x.LocationId == locId).ToList();
+            return orders;
         }
 
 
