@@ -9,7 +9,7 @@
 <form method="POST" asp-action="AddProducts" asp-controller="Order" class="nav-link text-dark">
     @foreach (var item in Model.InventoriesAll)
     {
-        <br>
+        <br><br>
         <div>
             <span>@item.ProductName</span>
             <div>
@@ -17,7 +17,6 @@
                     @for (int i = 0; i <= item.ProductQuantity; i++)
                     {
                         <option value=@i>@i</option>
-                        <br>
                     }
                 </select>
             </div>
