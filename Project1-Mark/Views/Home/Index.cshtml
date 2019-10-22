@@ -7,9 +7,9 @@
 <form method="GET" asp-action="Login" asp-controller="Login" class="nav-link text-dark">
     <h3>Are you a returning user?</h3>
     First Name:
-    <input type="text" name="CustomerFirstName" required minlength="2" maxlength="20" pattern="[A-Za-z]">
+    <input type="text" name="CustomerFirstName" pattern="[A-Za-z]{2,20}" required>
     Last Name:
-    <input type="text" name="CustomerLastname" required minlength="2" maxlength="20" pattern="[A-Za-z]">
+    <input type="text" name="CustomerLastname" required pattern="[A-Za-z]{2,20}">
     <input type="submit" value="Enter">
 </form>
 <br />
@@ -21,9 +21,9 @@
     <h3>Do you need to Register?</h3>
 
     First Name:
-    <input type="text" name="CustomerFirstName" required minlength="2" maxlength="20" pattern="[A-Za-z]">
+    <input type="text" name="CustomerFirstName" required pattern="[A-Za-z]{2,20}">
     Last Name:
-    <input type="text" name="CustomerLastname" required minlength="2" maxlength="20" pattern="[A-Za-z]">
+    <input type="text" name="CustomerLastname" required pattern="[A-Za-z]{2,20}">
     <input type="submit" value="Enter">
 </form>
 

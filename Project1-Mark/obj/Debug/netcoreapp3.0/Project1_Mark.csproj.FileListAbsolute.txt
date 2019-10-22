@@ -142,3 +142,4 @@ C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Sear
 C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Search\ListAllCustomers.cshtml.g.cs
 C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Search\ListCustomerDetails.cshtml.g.cs
 C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Search\CustomerDetails.cshtml.g.cs
+C:\revature\mark-project1\Project1-Mark\obj\Debug\netcoreapp3.0\Razor\Views\Search\OrderDetails1.cshtml.g.cs
