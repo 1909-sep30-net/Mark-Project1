@@ -15,8 +15,8 @@ namespace ClassLibrary1
 
         public Product(string name,int price)
         {
-            ProductName = name;
-            ProductPrice = price;
+            this.ProductName = name;
+            this.ProductPrice = price;
         }
 
         public Product(int ID, string name, int price)

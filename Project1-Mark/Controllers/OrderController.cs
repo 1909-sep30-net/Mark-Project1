@@ -105,9 +105,12 @@ namespace Project1_Mark.Controllers
 
             foreach (var item in collection)
             {
-                try
+                try//only add the product if the value > 0 !!!
                 {
-                    order.itemsOrdered.Add(item.Key, Convert.ToInt32(item.Value));
+                    if (Convert.ToInt32(item.Value) > 0)
+                    {
+                        order.itemsOrdered.Add(item.Key, Convert.ToInt32(item.Value));
+                    }
                 }
                 catch(FormatException ex)
                 {

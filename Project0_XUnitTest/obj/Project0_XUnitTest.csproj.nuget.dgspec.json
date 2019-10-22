@@ -229,6 +229,9 @@
               },
               "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj": {
                 "projectPath": "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj"
+              },
+              "C:\\revature\\mark-project1\\Project1-Mark\\Project1_Mark.csproj": {
+                "projectPath": "C:\\revature\\mark-project1\\Project1-Mark\\Project1_Mark.csproj"
               }
             }
           }
@@ -247,6 +250,10 @@
               "version": "[16.2.0, )"
             },
             "NLog": {
+              "target": "Package",
+              "version": "[4.6.7, )"
+            },
+            "NLog.Schema": {
               "target": "Package",
               "version": "[4.6.7, )"
             },
@@ -274,6 +281,107 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\revature\\mark-project1\\Project1-Mark\\Project1_Mark.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\revature\\mark-project1\\Project1-Mark\\Project1_Mark.csproj",
+        "projectName": "Project1_Mark",
+        "projectPath": "C:\\revature\\mark-project1\\Project1-Mark\\Project1_Mark.csproj",
+        "packagesPath": "C:\\Users\\MarkC\\.nuget\\packages\\",
+        "outputPath": "C:\\revature\\mark-project1\\Project1-Mark\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MarkC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj": {
+                "projectPath": "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj"
+              },
+              "C:\\revature\\mark-project1\\ClassLibrary2\\Project1_Mark.Models.csproj": {
+                "projectPath": "C:\\revature\\mark-project1\\ClassLibrary2\\Project1_Mark.Models.csproj"
+              },
+              "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj": {
+                "projectPath": "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

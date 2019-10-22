@@ -8,8 +8,7 @@ using Xunit;
 using Microsoft.Extensions.Logging;
 using NLog;
 using System.Diagnostics;
-//using Microsoft.AspNetCore.Mvc;
-
+ 
 
 namespace Project0_XUnitTest
 {
@@ -39,7 +38,7 @@ namespace Project0_XUnitTest
         private Order order;
         private Orders orders;
 
-        [Fact]//make sure product constructor works.
+        //[Fact]//make sure product constructor works.
         public void Test1()
         {
             //arrange
@@ -49,7 +48,7 @@ namespace Project0_XUnitTest
             var test = product0.ProductName;
 
             //assert
-            Assert.Equal(expected: "bamboo" , actual: test);
+            Assert.Equal("bamboo", test);
         }
 
         //make sure 
