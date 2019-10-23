@@ -32,7 +32,6 @@
           "Microsoft.EntityFrameworkCore.Tools": "3.0.0",
           "Microsoft.Extensions.Logging.Debug": "3.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.0.0",
-          "Project1_Mark.Models": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.0.0.0",
@@ -2034,8 +2033,7 @@
         "dependencies": {
           "ClassLibrary1": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
-          "NLog": "4.6.7",
-          "Project1_Mark.Models": "1.0.0"
+          "NLog": "4.6.7"
         },
         "runtime": {
           "DbLibrary.dll": {}
@@ -3734,9 +3732,6 @@
         "compile": {
           "WindowsBase.dll": {}
         },
-        "compileOnly": true
-      },
-      "Project1_Mark.Models/1.0.0": {
         "compileOnly": true
       }
     }
@@ -6235,11 +6230,6 @@
     },
     "WindowsBase/4.0.0.0": {
       "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Project1_Mark.Models/1.0.0": {
-      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

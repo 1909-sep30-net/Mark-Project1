@@ -1,0 +1,21 @@
+﻿@model DbLibrary.LocationsViewModel
+@{
+    ViewData["Title"] = "Order";
+}
+
+<br>
+<p>Please choose a location:</p>
+
+
+<form asp-controller="Order" asp-action="AddLocation">
+
+    <select asp-for="LocationName"
+            asp-items="@(new SelectList(Model.locationsAll,"LocationName"))">
+        <option>Please select one</option>
+    </select>
+
+    <input type="submit" />
+
+</form>
+<br />
+<a asp-action="LogOut" asp-controller="Login">Log Out and Start Over?</a>

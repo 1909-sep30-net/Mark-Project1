@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -6,12 +6,12 @@
     <UserSecretsId>10b8cc09-eda3-4860-880f-154c64304a16</UserSecretsId>
   </PropertyGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <Compile Remove="Views\Views\**" />
     <Content Remove="Views\Views\**" />
     <EmbeddedResource Remove="Views\Views\**" />
     <None Remove="Views\Views\**" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
@@ -30,8 +30,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
-    <ProjectReference Include="..\ClassLibrary2\Project1_Mark.Models.csproj" />
+    <!--<ProjectReference Include="..\ClassLibrary2\Project1_Mark.Models.csproj" />-->
     <ProjectReference Include="..\DbLibrary\DbLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

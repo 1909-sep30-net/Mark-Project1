@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DbLibrary.CustomerViewModel>
+
+@{
+    ViewData["Title"] = "ListAllCustomers";
+}
+
+<h1>List Of All Customers</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerLastName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerLastName)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "CustDetails", new { id = item.CustID }) |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br>
+<a asp-action="LogOut" asp-controller="Login">Log Out and Start Over?</a>

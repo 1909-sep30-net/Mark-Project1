@@ -2525,24 +2525,13 @@
         "dependencies": {
           "ClassLibrary1": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
-          "NLog": "4.6.7",
-          "Project1_Mark.Models": "1.0.0"
+          "NLog": "4.6.7"
         },
         "compile": {
           "bin/placeholder/DbLibrary.dll": {}
         },
         "runtime": {
           "bin/placeholder/DbLibrary.dll": {}
-        }
-      },
-      "Project1_Mark.Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
-        "compile": {
-          "bin/placeholder/Project1_Mark.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Project1_Mark.Models.dll": {}
         }
       }
     }
@@ -8114,11 +8103,6 @@
       "type": "project",
       "path": "../DbLibrary/DbLibrary.csproj",
       "msbuildProject": "../DbLibrary/DbLibrary.csproj"
-    },
-    "Project1_Mark.Models/1.0.0": {
-      "type": "project",
-      "path": "../ClassLibrary2/Project1_Mark.Models.csproj",
-      "msbuildProject": "../ClassLibrary2/Project1_Mark.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8130,8 +8114,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0",
       "Microsoft.Extensions.Logging.Debug >= 3.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0",
-      "Project1_Mark.Models >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0"
     ]
   },
   "packageFolders": {
@@ -8166,9 +8149,6 @@
           "projectReferences": {
             "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj": {
               "projectPath": "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj"
-            },
-            "C:\\revature\\mark-project1\\ClassLibrary2\\Project1_Mark.Models.csproj": {
-              "projectPath": "C:\\revature\\mark-project1\\ClassLibrary2\\Project1_Mark.Models.csproj"
             },
             "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj": {
               "projectPath": "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj"

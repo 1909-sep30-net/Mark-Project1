@@ -5,4 +5,3 @@ C:\revature\mark-project1\ClassLibrary1\obj\Debug\netcoreapp3.0\ClassLibrary1.As
 C:\revature\mark-project1\ClassLibrary1\obj\Debug\netcoreapp3.0\ClassLibrary1.AssemblyInfo.cs
 C:\revature\mark-project1\ClassLibrary1\obj\Debug\netcoreapp3.0\ClassLibrary1.dll
 C:\revature\mark-project1\ClassLibrary1\obj\Debug\netcoreapp3.0\ClassLibrary1.pdb
-C:\revature\mark-project1\ClassLibrary1\obj\Debug\netcoreapp3.0\ClassLibrary1.csprojAssemblyReference.cache

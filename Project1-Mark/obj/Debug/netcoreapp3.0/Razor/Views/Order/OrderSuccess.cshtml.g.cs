@@ -12,54 +12,9 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#nullable restore
-#line 1 "C:\revature\mark-project1\Project1-Mark\Views\_ViewImports.cshtml"
-using Project1_Mark;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "C:\revature\mark-project1\Project1-Mark\Views\_ViewImports.cshtml"
-using Project1_Mark.Models;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"932fae5932faf0ece7d340baba7d67b88d5400a2", @"/Views/Order/OrderSuccess.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dbc1be16f69178f6b167d16cc8c062e29e5938ea", @"/Views/_ViewImports.cshtml")]
     public class Views_Order_OrderSuccess : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<DbLibrary.CustomerViewModel>
     {
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "GET", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Order", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Order", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("nav-link text-dark"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Search", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_5 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Search", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_6 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Logout", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_7 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        #line hidden
-        #pragma warning disable 0649
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
-        #pragma warning restore 0649
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner __tagHelperRunner = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner();
-        #pragma warning disable 0169
-        private string __tagHelperStringValueBuffer;
-        #pragma warning restore 0169
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __backed__tagHelperScopeManager = null;
-        private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager __tagHelperScopeManager
-        {
-            get
-            {
-                if (__backed__tagHelperScopeManager == null)
-                {
-                    __backed__tagHelperScopeManager = new global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperScopeManager(StartTagHelperWritingScope, EndTagHelperWritingScope);
-                }
-                return __backed__tagHelperScopeManager;
-            }
-        }
-        private global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper;
-        private global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
@@ -79,10 +34,8 @@ using Project1_Mark.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("!</h1>\r\n<br>\r\n<br>\r\n<br>\r\n<h4>Now, what would you like to do?</h4>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "932fae5932faf0ece7d340baba7d67b88d5400a26261", async() => {
-                WriteLiteral("\r\n    <input type=\"hidden\" id=\"CustId\" name=\"CustomerId\"");
-                BeginWriteAttribute("value", " value=", 359, "", 379, 1);
+            WriteLiteral("!</h1>\r\n<br>\r\n<br>\r\n<br>\r\n<h4>Now, what would you like to do?</h4>\r\n\r\n<form method=\"GET\" asp-action=\"Order\" asp-controller=\"Order\" class=\"nav-link text-dark\">\r\n    <input type=\"hidden\" id=\"CustId\" name=\"CustomerId\"");
+            BeginWriteAttribute("value", " value=", 359, "", 379, 1);
 #nullable restore
 #line 13 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 366, Model.CustID, 366, 13, false);
@@ -90,9 +43,9 @@ WriteAttributeValue("", 366, Model.CustID, 366, 13, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerFirstName\" name=\"CustomerFirstName\"");
-                BeginWriteAttribute("value", " value=", 454, "", 485, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerFirstName\" name=\"CustomerFirstName\"");
+            BeginWriteAttribute("value", " value=", 454, "", 485, 1);
 #nullable restore
 #line 14 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 461, Model.CustomerFirstName, 461, 24, false);
@@ -100,9 +53,9 @@ WriteAttributeValue("", 461, Model.CustomerFirstName, 461, 24, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerLastName\" name=\"CustomerLastName\"");
-                BeginWriteAttribute("value", " value=", 558, "", 588, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerLastName\" name=\"CustomerLastName\"");
+            BeginWriteAttribute("value", " value=", 558, "", 588, 1);
 #nullable restore
 #line 15 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 565, Model.CustomerLastName, 565, 23, false);
@@ -110,32 +63,9 @@ WriteAttributeValue("", 565, Model.CustomerLastName, 565, 23, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"submit\" value=\"Proceed to Order Page\">\r\n");
-            }
-            );
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Method = (string)__tagHelperAttribute_0.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Action = (string)__tagHelperAttribute_1.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_1);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Controller = (string)__tagHelperAttribute_2.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_2);
-            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_3);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n\r\n<br>\r\n<br>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "932fae5932faf0ece7d340baba7d67b88d5400a29602", async() => {
-                WriteLiteral("\r\n    <input type=\"hidden\" id=\"custId\" name=\"CustomerId\"");
-                BeginWriteAttribute("value", " value=", 819, "", 839, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"submit\" value=\"Proceed to Order Page\">\r\n</form>\r\n\r\n<br>\r\n<br>\r\n\r\n<form method=\"GET\" asp-action=\"Search\" asp-controller=\"Search\" class=\"nav-link text-dark\">\r\n    <input type=\"hidden\" id=\"custId\" name=\"CustomerId\"");
+            BeginWriteAttribute("value", " value=", 819, "", 839, 1);
 #nullable restore
 #line 23 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 826, Model.CustID, 826, 13, false);
@@ -143,9 +73,9 @@ WriteAttributeValue("", 826, Model.CustID, 826, 13, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerFirstName\" name=\"CustomerFirstName\"");
-                BeginWriteAttribute("value", " value=", 914, "", 945, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerFirstName\" name=\"CustomerFirstName\"");
+            BeginWriteAttribute("value", " value=", 914, "", 945, 1);
 #nullable restore
 #line 24 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 921, Model.CustomerFirstName, 921, 24, false);
@@ -153,9 +83,9 @@ WriteAttributeValue("", 921, Model.CustomerFirstName, 921, 24, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerLastName\" name=\"CustomerLastName\"");
-                BeginWriteAttribute("value", " value=", 1018, "", 1048, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerLastName\" name=\"CustomerLastName\"");
+            BeginWriteAttribute("value", " value=", 1018, "", 1048, 1);
 #nullable restore
 #line 25 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 1025, Model.CustomerLastName, 1025, 23, false);
@@ -163,32 +93,9 @@ WriteAttributeValue("", 1025, Model.CustomerLastName, 1025, 23, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"submit\" value=\"Search Stuff\">\r\n");
-            }
-            );
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Method = (string)__tagHelperAttribute_0.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Action = (string)__tagHelperAttribute_4.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_4);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Controller = (string)__tagHelperAttribute_5.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_5);
-            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_3);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n\r\n<br>\r\n<br>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "932fae5932faf0ece7d340baba7d67b88d5400a212938", async() => {
-                WriteLiteral("\r\n    <input type=\"hidden\" id=\"custId\" name=\"CustomerId\"");
-                BeginWriteAttribute("value", " value=", 1268, "", 1288, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"submit\" value=\"Search Stuff\">\r\n</form>\r\n\r\n<br>\r\n<br>\r\n\r\n<form method=\"GET\" asp-action=\"Logout\" asp-controller=\"Home\" class=\"nav-link text-dark\">\r\n    <input type=\"hidden\" id=\"custId\" name=\"CustomerId\"");
+            BeginWriteAttribute("value", " value=", 1268, "", 1288, 1);
 #nullable restore
 #line 33 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 1275, Model.CustID, 1275, 13, false);
@@ -196,9 +103,9 @@ WriteAttributeValue("", 1275, Model.CustID, 1275, 13, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerFirstName\" name=\"CustomerFirstName\"");
-                BeginWriteAttribute("value", " value=", 1363, "", 1394, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerFirstName\" name=\"CustomerFirstName\"");
+            BeginWriteAttribute("value", " value=", 1363, "", 1394, 1);
 #nullable restore
 #line 34 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 1370, Model.CustomerFirstName, 1370, 24, false);
@@ -206,9 +113,9 @@ WriteAttributeValue("", 1370, Model.CustomerFirstName, 1370, 24, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerLastName\" name=\"CustomerLastName\"");
-                BeginWriteAttribute("value", " value=", 1467, "", 1497, 1);
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"hidden\" id=\"CustomerLastName\" name=\"CustomerLastName\"");
+            BeginWriteAttribute("value", " value=", 1467, "", 1497, 1);
 #nullable restore
 #line 35 "C:\revature\mark-project1\Project1-Mark\Views\Order\OrderSuccess.cshtml"
 WriteAttributeValue("", 1474, Model.CustomerLastName, 1474, 23, false);
@@ -216,28 +123,8 @@ WriteAttributeValue("", 1474, Model.CustomerLastName, 1474, 23, false);
 #line default
 #line hidden
 #nullable disable
-                EndWriteAttribute();
-                WriteLiteral(">\r\n    <input type=\"submit\" value=\"Exit\">\r\n");
-            }
-            );
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
-            __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Method = (string)__tagHelperAttribute_0.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Action = (string)__tagHelperAttribute_6.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_6);
-            __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Controller = (string)__tagHelperAttribute_7.Value;
-            __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_7);
-            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_3);
-            await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
-            {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
-            }
-            Write(__tagHelperExecutionContext.Output);
-            __tagHelperExecutionContext = __tagHelperScopeManager.End();
+            EndWriteAttribute();
+            WriteLiteral(">\r\n    <input type=\"submit\" value=\"Exit\">\r\n</form>");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

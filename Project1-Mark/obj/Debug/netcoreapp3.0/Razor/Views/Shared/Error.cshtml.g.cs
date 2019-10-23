@@ -13,21 +13,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\revature\mark-project1\Project1-Mark\Views\_ViewImports.cshtml"
+#line 1 "C:\revature\mark-project1\Project1-Mark\Views\Shared\_ViewImports.cshtml"
 using Project1_Mark;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\revature\mark-project1\Project1-Mark\Views\_ViewImports.cshtml"
+#line 2 "C:\revature\mark-project1\Project1-Mark\Views\Shared\_ViewImports.cshtml"
 using Project1_Mark.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8dd67f7bb40c20d5223a4f6f7082e1c6b2644197", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dbc1be16f69178f6b167d16cc8c062e29e5938ea", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dbc1be16f69178f6b167d16cc8c062e29e5938ea", @"/Views/Shared/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

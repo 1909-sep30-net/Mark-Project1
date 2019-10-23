@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DbLibrary.Entities.Orders>
+
+@{
+    ViewData["Title"] = "CustomerDetails";
+}
+
+<h1>Customer Details</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateModified)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateModified)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br>
+<div>
+    @Html.ActionLink("Return", "Search")<br />
+    <a asp-action="LogOut" asp-controller="Login">Log Out and Start Over?</a>
+</div>

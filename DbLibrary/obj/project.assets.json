@@ -1260,16 +1260,6 @@
         "runtime": {
           "bin/placeholder/ClassLibrary1.dll": {}
         }
-      },
-      "Project1_Mark.Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
-        "compile": {
-          "bin/placeholder/Project1_Mark.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Project1_Mark.Models.dll": {}
-        }
       }
     }
   },
@@ -4888,11 +4878,6 @@
       "type": "project",
       "path": "../ClassLibrary1/ClassLibrary1.csproj",
       "msbuildProject": "../ClassLibrary1/ClassLibrary1.csproj"
-    },
-    "Project1_Mark.Models/1.0.0": {
-      "type": "project",
-      "path": "../ClassLibrary2/Project1_Mark.Models.csproj",
-      "msbuildProject": "../ClassLibrary2/Project1_Mark.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4900,8 +4885,7 @@
       "ClassLibrary1 >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0",
-      "NLog >= 4.6.7",
-      "Project1_Mark.Models >= 1.0.0"
+      "NLog >= 4.6.7"
     ]
   },
   "packageFolders": {
@@ -4936,9 +4920,6 @@
           "projectReferences": {
             "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj": {
               "projectPath": "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj"
-            },
-            "C:\\revature\\mark-project1\\ClassLibrary2\\Project1_Mark.Models.csproj": {
-              "projectPath": "C:\\revature\\mark-project1\\ClassLibrary2\\Project1_Mark.Models.csproj"
             }
           }
         }

@@ -1,6 +1,3 @@
-C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.csprojAssemblyReference.cache
-C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.AssemblyInfoInputs.cache
-C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.AssemblyInfo.cs
 C:\revature\mark-project1\DbLibrary\bin\Debug\netcoreapp3.0\DbLibrary.deps.json
 C:\revature\mark-project1\DbLibrary\bin\Debug\netcoreapp3.0\DbLibrary.runtimeconfig.json
 C:\revature\mark-project1\DbLibrary\bin\Debug\netcoreapp3.0\DbLibrary.runtimeconfig.dev.json
@@ -8,6 +5,9 @@ C:\revature\mark-project1\DbLibrary\bin\Debug\netcoreapp3.0\DbLibrary.dll
 C:\revature\mark-project1\DbLibrary\bin\Debug\netcoreapp3.0\DbLibrary.pdb
 C:\revature\mark-project1\DbLibrary\bin\Debug\netcoreapp3.0\ClassLibrary1.dll
 C:\revature\mark-project1\DbLibrary\bin\Debug\netcoreapp3.0\ClassLibrary1.pdb
+C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.csprojAssemblyReference.cache
+C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.AssemblyInfoInputs.cache
+C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.AssemblyInfo.cs
 C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.csproj.CopyComplete
 C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.dll
 C:\revature\mark-project1\DbLibrary\obj\Debug\netcoreapp3.0\DbLibrary.pdb

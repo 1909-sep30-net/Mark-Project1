@@ -1,0 +1,31 @@
+﻿@model DbLibrary.ViewInventoryViewModels
+
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<h2>Please choose your desired quantity from the available products below.</h2>
+
+<form method="POST" asp-action="AddProducts" asp-controller="Order" class="nav-link text-dark">
+    @foreach (var item in Model.InventoriesAll)
+    {
+        <br>
+        <div>
+            @*<span>@item.ProductName</span>*@
+
+            <div>
+                @item.ProductName
+                <select name="@item.ProductName">
+                    @for (int i = 0; i <= item.ProductQuantity; i++)
+                    {
+                        <option value=@i>@i</option>
+                    }
+                </select>
+            </div>
+        </div>
+    }
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<br><br>
+<a asp-action="LogOut" asp-controller="Login">Log Out and Start Over?</a>

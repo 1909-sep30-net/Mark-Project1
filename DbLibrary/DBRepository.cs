@@ -32,7 +32,7 @@ namespace DBLibrary
     public class DBRepository
     {
         private readonly Project0Context _dbContext;
-        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
+        //private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
         private readonly ILogger<Project0Context> _logger;
 
         /// <summary>
@@ -209,7 +209,8 @@ namespace DBLibrary
                 .First();
 
             if (loc == null)
-            {   
+            {
+                _logger.LogInformation("User unfoiund in DB");
                 throw new NullReferenceException("That location does not exist. Please try again.");
             }
 
@@ -283,7 +284,7 @@ namespace DBLibrary
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("There was an error Adding your account. Please try again with a different name.");
-                s_logger.Info(ex);
+                _logger.LogError(ex, "Unable to update DB at {time}", DateTime.UtcNow );
                 return null;
             }
 
@@ -295,21 +296,6 @@ namespace DBLibrary
         ///This method takes as context and the verified customer info from main and inserts it into the DB
         ///Returns the customer from the DB
         ///</summary>
-        /*        public Customer ReadCustomer(Customer customer)
-                {
-                    var result = _dbContext.Customers
-                        .Where(c => c.CustomerFirstName == customer.CustomerFirstName && c.CustomerLastName == customer.CustomerLastName)
-                        .FirstOrDefault();
-
-                    if (result == null)
-                    {
-                        Console.WriteLine("Sorry, That customer was not found.");
-                        return null;
-                    }
-                    var result1 = Mapper.MapCustomer(result);
-                    return result1;
-                }*/
-
         public CustomerViewModel ReadCustomer(Customer customer)
         {
             var result = _dbContext.Customers
@@ -334,6 +320,7 @@ namespace DBLibrary
             if (result == null)
             {
                 Console.WriteLine("Sorry, That customer was not found.");
+                _logger.LogInformation("Unable to find user by ID in DB at {time}", DateTime.UtcNow);
                 return null;
             }
             var result1 = Mapper.MapCustomer(result);
@@ -343,6 +330,14 @@ namespace DBLibrary
         public List<CustomerViewModel> ReadAllCustomers()
         {
             var result = _dbContext.Customers;              //get all the Customers
+
+            if (result == null)
+            {
+                Console.WriteLine("Sorry, Unable to find all customers.");
+                _logger.LogInformation("Unable to find all customers in DB at {time}", DateTime.UtcNow);
+                return null;
+            }
+
             List<CustomerViewModel> custs = new List<CustomerViewModel>();    //create a list of Customer objects
             foreach (var item in result)                    //map each Customers to a Customer
             {
@@ -351,31 +346,6 @@ namespace DBLibrary
 
             return custs;
         }
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static List<Customer> ReadAllCustomers()
-        //{
-        //    return customers;
-        //}
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static List<Customer> UpdateCustomer(List<Customer> Customers, Customer customer)
-        //{
-        //    return Customers;
-        //}
-
-        ///<summary>
-        ///This option not required at this time 
-        ///</summary>
-        //public static List<Customer> DeleteCustomer(List<Customer> Customers, Customer customer)
-        //{
-        //    //Customers.Find(customer);//find out how to find and delete from a list.
-        //    return Customers;
-        //}
 
         /**************************************
          * ORDER FUNCTIONS BELOW
