@@ -35,11 +35,10 @@ steps:
     summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
 
 - task: DotNetCoreCLI@2
-  displayName: dotnet publish + zip
   inputs:
     command: 'publish'
-    publishWebProjects: true
-    zipAfterPublish: true
+    publishWebProjects: false
+    projects: 'testToWork'
 
 - task: AzureRmWebAppDeployment@4
   inputs:
