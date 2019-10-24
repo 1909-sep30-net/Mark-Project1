@@ -5,7 +5,6 @@ using ClassLibrary1;
 using DbLibrary;
 using DbLibrary.Entities;
 using Microsoft.Extensions.Logging;
-using NLog;
 
 namespace DBLibrary
 {
@@ -13,7 +12,6 @@ namespace DBLibrary
     {
         //create logging variables.
         private readonly ILogger<Mapper> _logger;
-        private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Initializes a new repository given a data source and instantiates logging

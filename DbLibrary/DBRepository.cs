@@ -16,7 +16,6 @@
  *    (so that the connection string is not put on the public internet)
  * 5. any time you change the structure of the tables (DDL), go to step 3.
  */
-using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +31,6 @@ namespace DBLibrary
     public class DBRepository
     {
         private readonly Project0Context _dbContext;
-        //private static readonly NLog.ILogger s_logger = LogManager.GetCurrentClassLogger();
         private readonly ILogger<Project0Context> _logger;
 
         /// <summary>
@@ -74,53 +72,12 @@ namespace DBLibrary
                 inv.ProductName = GetProdNameById(item.ProductId);  //Add product name
                 invList.Add(inv);                                   //append to List to return to OrderController
             }
-
             return invList;
         }
 
         /**************************************
          * PRODUCT FUNCTIONS BELOW
          * ************************************/
-
- /*       public static void AddProduct(Product product)
-        {
-            //remember to save.
-            Products prods = Mapper.MapProduct();
-        }*/
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static int AddProduct(Products product)
-        //{
-        //    using (var db = new Project0Context())
-        //    {
-        //        Console.WriteLine("Inserting a new product");
-        //        db.Add(product);
-        //        //db.Add(new Products
-        //        //{
-        //        //    ProductName = "mango",
-        //        //    ProductPrice = 1234
-        //        //});
-        //        db.SaveChanges();
-        //        //products.Add(product);
-        //        return 1;
-        //    }
-        //}
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static Products ReadProduct(Products product)
-        //{
-        //    //find the product in the array
-        //    using (var db = new Project0Context())
-        //    {
-        //        Console.WriteLine("Reading a product");
-        //        var prod = db.Products.Find(2);
-        //        return prod;
-        //    }
-        //}
 
         ///<summary>
         ///returns a list of all the Products
@@ -138,55 +95,6 @@ namespace DBLibrary
 
             return Mapper.MapProduct(prod);
         }
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static List<Product> UpdateProduct(Project0Context context, Product product)
-        //{
-        //    //find then update the product
-        //    return products;
-        //}
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static List<Product> DeleteProduct(List<Product> products, Product product)
-        //{
-        //    return products;
-        //}
-
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static Product SearchProducts(Product product)
-        //{
-        //    return product;
-        //}
-
-        /**************************************
-         * LOCATION FUNCTIONS BELOW
-         * *************************************/
-
-        //public static int AddLocation(Location location)
-        //{
-        //    using (var db = new Project0Context())
-        //    {
-        //        Console.WriteLine("Inserting a new product");
-        //        db.Add(location);
-        //        //db.Add(new Products
-        //        //{
-        //        //    ProductName = "apple",
-        //        //    ProductPrice = 1234
-        //        //});
-        //        db.SaveChanges();
-        //        //products.Add(product);
-        //        return 1;
-        //        //locations.Add(location);
-        //        //return locations;
-        //    }
-        //}
 
         ///<summary>
         ///takes a context and returns a List of Locations
@@ -210,10 +118,9 @@ namespace DBLibrary
 
             if (loc == null)
             {
-                _logger.LogInformation("User unfoiund in DB");
+                _logger.LogInformation("User unfound in DB");
                 throw new NullReferenceException("That location does not exist. Please try again.");
             }
-
             return Mapper.MapLocation(loc);
         }
 
@@ -229,30 +136,6 @@ namespace DBLibrary
             //Map and return
             return Mapper.MapLocation(loc);
         }
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static void UpdateLocation(Location location)
-        //{
-
-        //}
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static void DeleteLocation(Location location)
-        //{
-
-        //}
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static Location SearchLocations(Location location)
-        //{
-        //    return location;
-        //}
 
         /**************************************
          * CUSTOMER FUNCTIONS BELOW
@@ -413,11 +296,10 @@ namespace DBLibrary
                 {
                     Console.WriteLine(ex.Message);
                     Console.WriteLine("There was an error Adding your order. Please try again.");
-                    s_logger.Info(ex);
+                    _logger.LogInformation(ex, "Unable to save DecreaseInventory changes to DB");
+
                 }
-
             }
-
             return true;
         }
 
@@ -481,21 +363,5 @@ namespace DBLibrary
             var custOrders = _dbContext.Orders.Where(x => x.CustomerId == CustomerId).ToList();
             return custOrders;
         }
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static List<Order> UpdateOrder(List<Order> orders, Order order)
-        //{
-        //    return orders;
-        //}
-
-        ///<summary>
-        ///This option not required at this time
-        ///</summary>
-        //public static List<Order> DeleteOrder(List<Order> orders, Order order)
-        //{
-        //    return orders;
-        //}
     }
 }

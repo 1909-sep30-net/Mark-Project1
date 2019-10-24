@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbLibrary", "..\DbLibrary\D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project0_XUnitTest", "..\Project0_XUnitTest\Project0_XUnitTest.csproj", "{2CBBC047-BFB8-49FC-8976-2331BA9B323B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testToWork", "..\testToWork\testToWork.csproj", "{D3D8F88D-526B-42D3-8F6F-A8340B685AAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testToWork", "..\testToWork\testToWork.csproj", "{D3D8F88D-526B-42D3-8F6F-A8340B685AAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{70EC8D39-CD5F-42EC-93E5-E87DB55E05D5}"
+	ProjectSection(SolutionItems) = preProject
+		dockerfile.txt = dockerfile.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

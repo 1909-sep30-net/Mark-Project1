@@ -1,0 +1,8 @@
+C:\revature\mark-project1\ClassLibrary1\bin\Release\netcoreapp3.0\ClassLibrary1.deps.json
+C:\revature\mark-project1\ClassLibrary1\bin\Release\netcoreapp3.0\ClassLibrary1.dll
+C:\revature\mark-project1\ClassLibrary1\bin\Release\netcoreapp3.0\ClassLibrary1.pdb
+C:\revature\mark-project1\ClassLibrary1\obj\Release\netcoreapp3.0\ClassLibrary1.csprojAssemblyReference.cache
+C:\revature\mark-project1\ClassLibrary1\obj\Release\netcoreapp3.0\ClassLibrary1.AssemblyInfoInputs.cache
+C:\revature\mark-project1\ClassLibrary1\obj\Release\netcoreapp3.0\ClassLibrary1.AssemblyInfo.cs
+C:\revature\mark-project1\ClassLibrary1\obj\Release\netcoreapp3.0\ClassLibrary1.dll
+C:\revature\mark-project1\ClassLibrary1\obj\Release\netcoreapp3.0\ClassLibrary1.pdb
