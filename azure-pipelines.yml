@@ -20,16 +20,13 @@ steps:
     SonarCloud: 'sonarcloud-markcmoore'
     organization: 'markcmoore-revature'
     scannerMode: 'MSBuild'
-    projectKey: 'markcmoore-project1'
-    extraProperties: |
-        sonar.exclusions=**/lib/**
+    projectKey: 'markcmoore-revature'
+    projectName: 'markcmoore-project1'
 
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   workingDirectory: ./testToWork
-
-
 
 # a task can encapsulate some useful logic so we don't have to
 # write it all out in script step...
