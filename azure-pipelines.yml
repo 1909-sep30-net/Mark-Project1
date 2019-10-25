@@ -54,7 +54,7 @@ steps:
   inputs:
     command: 'publish'
     arguments: --configuration $(buildConfiguration)
-    publishWebProjects: true
+    projects: ./testToWork
     zipAfterPublish: true
 
 - task: AzureRmWebAppDeployment@4
