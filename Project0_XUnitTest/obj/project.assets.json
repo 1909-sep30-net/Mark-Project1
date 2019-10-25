@@ -6537,23 +6537,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MarkC\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\colto_000\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\revature\\mark-project1\\Project0_XUnitTest\\Project0_XUnitTest.csproj",
+      "projectUniqueName": "C:\\revature\\Mark-Project1\\Project0_XUnitTest\\Project0_XUnitTest.csproj",
       "projectName": "Project0_XUnitTest",
-      "projectPath": "C:\\revature\\mark-project1\\Project0_XUnitTest\\Project0_XUnitTest.csproj",
-      "packagesPath": "C:\\Users\\MarkC\\.nuget\\packages\\",
-      "outputPath": "C:\\revature\\mark-project1\\Project0_XUnitTest\\obj\\",
+      "projectPath": "C:\\revature\\Mark-Project1\\Project0_XUnitTest\\Project0_XUnitTest.csproj",
+      "packagesPath": "C:\\Users\\colto_000\\.nuget\\packages\\",
+      "outputPath": "C:\\revature\\Mark-Project1\\Project0_XUnitTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\MarkC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\colto_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

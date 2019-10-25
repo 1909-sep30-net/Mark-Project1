@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj": {}
+    "C:\\revature\\Mark-Project1\\DbLibrary\\DbLibrary.csproj": {}
   },
   "projects": {
-    "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj": {
+    "C:\\revature\\Mark-Project1\\ClassLibrary1\\ClassLibrary1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj",
+        "projectUniqueName": "C:\\revature\\Mark-Project1\\ClassLibrary1\\ClassLibrary1.csproj",
         "projectName": "ClassLibrary1",
-        "projectPath": "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj",
-        "packagesPath": "C:\\Users\\MarkC\\.nuget\\packages\\",
-        "outputPath": "C:\\revature\\mark-project1\\ClassLibrary1\\obj\\",
+        "projectPath": "C:\\revature\\Mark-Project1\\ClassLibrary1\\ClassLibrary1.csproj",
+        "packagesPath": "C:\\Users\\colto_000\\.nuget\\packages\\",
+        "outputPath": "C:\\revature\\Mark-Project1\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MarkC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\colto_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,20 +62,17 @@
         }
       }
     },
-    "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj": {
+    "C:\\revature\\Mark-Project1\\DbLibrary\\DbLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj",
+        "projectUniqueName": "C:\\revature\\Mark-Project1\\DbLibrary\\DbLibrary.csproj",
         "projectName": "DbLibrary",
-        "projectPath": "C:\\revature\\mark-project1\\DbLibrary\\DbLibrary.csproj",
-        "packagesPath": "C:\\Users\\MarkC\\.nuget\\packages\\",
-        "outputPath": "C:\\revature\\mark-project1\\DbLibrary\\obj\\",
+        "projectPath": "C:\\revature\\Mark-Project1\\DbLibrary\\DbLibrary.csproj",
+        "packagesPath": "C:\\Users\\colto_000\\.nuget\\packages\\",
+        "outputPath": "C:\\revature\\Mark-Project1\\DbLibrary\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MarkC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\colto_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj": {
-                "projectPath": "C:\\revature\\mark-project1\\ClassLibrary1\\ClassLibrary1.csproj"
+              "C:\\revature\\Mark-Project1\\ClassLibrary1\\ClassLibrary1.csproj": {
+                "projectPath": "C:\\revature\\Mark-Project1\\ClassLibrary1\\ClassLibrary1.csproj"
               }
             }
           }

@@ -58,6 +58,7 @@ namespace Project1_Mark
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            Console.WriteLine("Colton");
 
             app.UseRouting();
 
