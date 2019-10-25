@@ -21,6 +21,8 @@ steps:
     organization: 'markcmoore-revature'
     scannerMode: 'MSBuild'
     projectKey: 'markcmoore-project1'
+    extraProperties: |
+        sonar.exclusions=**/lib/**
 
 - script: dotnet build Project1-Mark/Project1-Mark.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
