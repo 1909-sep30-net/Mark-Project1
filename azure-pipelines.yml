@@ -12,8 +12,6 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-
-
 steps:
 
 - task: SonarCloudPrepare@1
@@ -23,7 +21,9 @@ steps:
     organization: 'markcmoore-revature'
     scannerMode: 'MSBuild'
     projectKey: 'markcmoore-project1'
-        
+    extraProperties: |
+        sonar.exclusions=**/lib/**
+
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
@@ -63,6 +63,7 @@ steps:
     zipAfterPublish: true
 
 - task: AzureRmWebAppDeployment@4
+  displayName: App Service deploy
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Pay-As-You-Go(386f8ffa-3367-4bd7-b850-f755512189e6)'
