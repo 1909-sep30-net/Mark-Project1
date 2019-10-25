@@ -20,9 +20,7 @@ steps:
     SonarCloud: 'sonarcloud-markcmoore'
     organization: 'markcmoore-revature'
     scannerMode: 'MSBuild'
-    projectKey: 'markcmoore-revature'
-    projectName: 'markcmoore-project1'
-
+    projectKey: 'markcmoore-project1'
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
